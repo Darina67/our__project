@@ -1,0 +1,87 @@
+/* roboto-regular - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/roboto-v27-latin-regular.woff2") format("woff2"), url("../fonts/roboto-v27-latin-regular.woff") format("woff");
+}
+
+/* roboto-500 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("../fonts/roboto-v27-latin-500.woff2") format("woff2"), url("../fonts/roboto-v27-latin-500.woff") format("woff");
+}
+
+/* roboto-700 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("../fonts/roboto-v27-latin-700.woff2") format("woff2"), url("../fonts/roboto-v27-latin-700.woff") format("woff");
+}
+
+html {
+  font-family: 'Roboto';
+}
+
+.container {
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.b-ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  align-items: center;
+  height: 88px;
+  margin: 0;
+  color: #828282;
+  font-size: 18px;
+}
+
+.b-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.b-title .title__name {
+  font-size: 48px;
+  max-width: 123px;
+}
+
+.b-title .title__info {
+  font-size: 24px;
+  max-width: 216px;
+}
+
+.b-intro {
+  margin-bottom: 103px;
+  margin-top: 45px;
+}
+
+.section.about {
+  display: flex;
+  align-items: center;
+  background-color: #f6f6f6;
+  height: 506px;
+}
+
+.section.about .b-about {
+  max-width: 428px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section.about .about__title {
+  font-weight: 700;
+  font-size: 34px;
+  margin-bottom: 28px;
+}
+
+.section.about .about__subtitle {
+  font-size: 18px;
+}
