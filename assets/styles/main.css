@@ -1,29 +1,41 @@
 /* roboto-regular - latin */
 @font-face {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   src: local(""), url("../fonts/roboto-v27-latin-regular.woff2") format("woff2"), url("../fonts/roboto-v27-latin-regular.woff") format("woff");
+  /* Modern Browsers */
 }
 
 /* roboto-500 - latin */
 @font-face {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   src: local(""), url("../fonts/roboto-v27-latin-500.woff2") format("woff2"), url("../fonts/roboto-v27-latin-500.woff") format("woff");
+  /* Modern Browsers */
 }
 
 /* roboto-700 - latin */
 @font-face {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
   src: local(""), url("../fonts/roboto-v27-latin-700.woff2") format("woff2"), url("../fonts/roboto-v27-latin-700.woff") format("woff");
+  /* Modern Browsers */
 }
 
 html {
-  font-family: 'Roboto';
+  font-family: "Roboto";
+}
+
+a {
+  color: #000;
+}
+
+.section.skills .b-skills .skill__title {
+  font-weight: 700;
+  color: #828282;
 }
 
 .container {
@@ -63,6 +75,23 @@ html {
   margin-top: 45px;
 }
 
+.b-about {
+  max-width: 298px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about__title {
+  font-weight: 700;
+  font-size: 34px;
+  margin-bottom: 28px;
+}
+
+.about__subtitle {
+  font-size: 18px;
+  margin-bottom: 75px;
+}
+
 .section.about {
   display: flex;
   align-items: center;
@@ -84,4 +113,50 @@ html {
 
 .section.about .about__subtitle {
   font-size: 18px;
+}
+
+.section.skills {
+  display: flex;
+  align-items: center;
+  height: 603px;
+}
+
+.section.skills .b-skills {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section.skills .b-skills .skills__item {
+  width: 167px;
+  height: 219px;
+  text-align: center;
+}
+
+.section.skills .b-skills .skills__item:not(:last-child) {
+  margin-right: 90px;
+}
+
+.section.skills .b-skills .skill__img {
+  width: 90px;
+  height: 90px;
+  padding-left: 40px;
+}
+
+.section.skills .b-skills .skill__title {
+  padding-bottom: 42px;
+  margin-top: 42px;
+}
+
+.section.portfolio .about__title {
+  margin-bottom: 64px;
+}
+
+.section.portfolio .portfolio__item {
+  margin-top: 100px;
+}
+
+.section.portfolio .portfolio__href {
+  text-align: center;
+  margin-top: 42px;
+  color: #000;
 }

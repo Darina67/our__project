@@ -1,87 +1,145 @@
+//:compressed
 /* roboto-regular - latin */
 @font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    src: local(''),
-         url('../fonts/roboto-v27-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-         url('../fonts/roboto-v27-latin-regular.woff') format('woff'), /* Modern Browsers */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/roboto-v27-latin-regular.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/roboto-v27-latin-regular.woff")
+      format("woff"); /* Modern Browsers */
+}
+/* roboto-500 - latin */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("../fonts/roboto-v27-latin-500.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/roboto-v27-latin-500.woff")
+      format("woff"); /* Modern Browsers */
+}
+/* roboto-700 - latin */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("../fonts/roboto-v27-latin-700.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("../fonts/roboto-v27-latin-700.woff")
+      format("woff"); /* Modern Browsers */
+}
+html {
+  font-family: "Roboto";
+}
+a {
+  color: #000;
+}
+%medium-font {
+  font-weight: 500;
+}
+%bold-font {
+  font-weight: 700;
+  color: #828282;
+}
+.container {
+  max-width: 950px;
+  margin: 0 auto;
+}
+.b-ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  align-items: center;
+  height: 88px;
+  margin: 0;
+  color: #828282;
+  font-size: 18px;
+}
+.b-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .title__name {
+    font-size: 48px;
+    max-width: 123px;
   }
-  /* roboto-500 - latin */
-  @font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    src: local(''),
-         url('../fonts/roboto-v27-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
-         url('../fonts/roboto-v27-latin-500.woff') format('woff'), /* Modern Browsers */
+  .title__info {
+    font-size: 24px;
+    max-width: 216px;
   }
-  /* roboto-700 - latin */
-  @font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    src: local(''),
-         url('../fonts/roboto-v27-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-         url('../fonts/roboto-v27-latin-700.woff') format('woff'), /* Modern Browsers */
-  }
-  html{
-      font-family: 'Roboto';
-  }
-  %medium-font{
-      font-weight: 500;
-  }
-  %bold-font{
-      font-weight: 700;
-      color: #828282;
-  }
-.container{
-    max-width: 950px;
+}
+.b-intro {
+  margin-bottom: 103px;
+  margin-top: 45px;
+}
+.b-about {
+  max-width: 298px;
+  margin: 0 auto;
+  text-align: center;
+}
+.about__title {
+  font-weight: 700;
+  font-size: 34px;
+  margin-bottom: 28px;
+}
+.about__subtitle {
+  font-size: 18px;
+  margin-bottom: 75px;
+}
+.section.about {
+  display: flex;
+  align-items: center;
+  background-color: #f6f6f6;
+  height: 506px;
+  .b-about {
+    max-width: 428px;
     margin: 0 auto;
-}
-.b-ul{
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    align-items: center;
-    height: 88px;
-    margin: 0;
-    color: #828282;
+    text-align: center;
+  }
+  .about__title {
+    font-weight: 700;
+    font-size: 34px;
+    margin-bottom: 28px;
+  }
+  .about__subtitle {
     font-size: 18px;
+  }
 }
-.b-title{
+.section.skills {
+  display: flex;
+  align-items: center;
+  height: 603px;
+  .b-skills {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    .title__name{
-        font-size: 48px;
-        max-width: 123px;
+    .skills__item {
+      width: 167px;
+      height: 219px;
+      text-align: center;
     }
-    .title__info{
-        font-size: 24px;
-        max-width: 216px;
+    .skills__item:not(:last-child) {
+      margin-right: 90px;
     }
+    .skill__img {
+      width: 90px;
+      height: 90px;
+      padding-left: 40px;
+    }
+    .skill__title {
+      padding-bottom: 42px;
+      margin-top: 42px;
+      @extend %bold-font;
+    }
+  }
 }
-.b-intro{
-    margin-bottom: 103px;
-        margin-top: 45px;
-}
-.section.about{
-    display: flex;
-    align-items: center;
-    background-color: #f6f6f6;
-    height: 506px;
-    .b-about{
-        max-width: 428px;
-        margin: 0 auto;
-        text-align: center;
-    }
-    .about__title{
-        font-weight: 700;
-        font-size:  34px;
-        margin-bottom: 28px;
-    }
-    .about__subtitle{
-        font-size: 18px;
-    }
+.section.portfolio {
+  .about__title {
+    margin-bottom: 64px;
+  }
+  .portfolio__item {
+    margin-top: 100px;
+  }
+  .portfolio__href {
+    text-align: center;
+    margin-top: 42px;
+    color: #000;
+  }
 }
