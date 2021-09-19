@@ -51,6 +51,10 @@ a {
   width: 100%;
   padding: 0 15px;
 }
+.b-header {
+  background-color: #fff;
+  box-shadow: none;
+}
 .b-header.fixed {
   padding: 10px 0;
   background-color: #e5e5e5;
@@ -59,6 +63,7 @@ a {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 2;
   transform: translate3d(0, 0, 0);
 }
 .b-ul {
@@ -69,8 +74,14 @@ a {
   height: 88px;
   margin: 0;
   padding: 0;
+}
+.b-ul a {
   color: #828282;
-  font-size: 18px;
+  font-size: 24px;
+  text-decoration: none;
+  &:hover {
+    color: #333;
+  }
 }
 .b-title {
   display: flex;
@@ -85,10 +96,18 @@ a {
     max-width: 216px;
   }
 }
-.b-intro {
-  margin-bottom: 103px;
-  margin-top: 45px;
+.intro {
+  height: 679px;
+
+  .b-intro {
+    margin-bottom: 103px;
+    margin-top: 45px;
+    background: url(../images/intro.png) center no-repeat;
+    background-size: cover;
+    min-height: 386px;
+  }
 }
+
 .b-about {
   max-width: 298px;
   margin: 0 auto;
@@ -129,13 +148,14 @@ a {
   .b-skills {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     .skills__item {
       width: 167px;
       height: 219px;
       text-align: center;
-    }
-    .skills__item:not(:last-child) {
-      margin-right: 90px;
+      .figma__img {
+        padding-left: 20px;
+      }
     }
     .skill__img {
       width: 90px;
@@ -158,6 +178,18 @@ a {
   .portfolio__item {
     margin-top: 100px;
   }
+  .portfolio__img {
+    position: relative;
+    padding-top: 56.25%;
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: auto;
+    }
+  }
+
   .portfolio__item:last-child {
     padding-bottom: 93px;
   }
@@ -241,6 +273,10 @@ a {
     text-decoration: none;
     width: 180px;
     margin: 0 auto;
+    &:hover {
+      background-color: #e5e5e5;
+      color: #333;
+    }
   }
   .b-hrefs {
     padding-top: 45px;
@@ -256,4 +292,25 @@ a {
     font-size: 14px;
     line-height: 1.5;
   }
+}
+// media
+@media (max-width: 1230px) {
+}
+@media (max-width: 990px) {
+}
+@media (max-width: 770px) {
+  .section.skills {
+    margin: 100px 0;
+    .b-skills {
+      justify-content: center;
+      .skills__item {
+        width: 257px;
+        display: grid;
+        justify-content: center;
+        margin: 25px 15px;
+      }
+    }
+  }
+}
+@media (max-width: 575px) {
 }

@@ -14,7 +14,7 @@
     <title>Web_Dev67</title>
   </head>
   <body>
-    <header class="b-header fixed">
+    <header class="b-header fixed" id="header">
       <div class="container">
         <nav class="b-nav">
           <ul class="b-ul">
@@ -29,7 +29,7 @@
       </div>
     </header>
     <main class="main" id="main">
-      <section class="section intro">
+      <section class="intro" id="intro">
         <div class="container">
           <div class="b-title">
             <div class="title__name">Web Dev</div>
@@ -39,7 +39,6 @@
             </div>
           </div>
           <div class="b-intro">
-            <img class="intro__img" src="assets/images/intro.png" alt="intro" />
           </div>
         </div>
       </section>
@@ -98,7 +97,7 @@
             </div>
             <div class="skills__item">
               <div class="skill__img">
-                <img src="assets/images/figma.png" alt="Figma" />
+                <img src="assets/images/figma.png" alt="Figma" class="figma__img"/>
               </div>
               <div class="skill__title">Figma</div>
               <div class="skill__stars">
@@ -114,23 +113,24 @@
             <div class="about__title">Портфолио</div>
           </div>
           <div class="portfolio__item">
-            <div class="portolio__img">
+            <div class="portfolio__img">
               <img src="assets/images/portfolio__1.png" alt="Le Chateau" />
             </div>
             <div class="portfolio__href"><a href="#">Le Chateau</a></div>
           </div>
           <div class="portfolio__item">
-            <div class="portolio__img">
+            <div class="portfolio__img">
               <img src="assets/images/portfolio__2.png" alt="Adam Smith" />
             </div>
             <div class="portfolio__href"><a href="#">Adam Smith</a></div>
           </div>
           <div class="portfolio__item">
+            <div class="portfolio__img">
             <img
-              class="portolio__img"
               src="assets/images/portfolio__3.png"
               alt="Masters of Blade"
             />
+          </div>
             <div class="portfolio__href"><a href="#">Masters of Blade</a></div>
           </div>
         </div>
@@ -208,6 +208,7 @@
         <div class="info">Мы в <br> LinkedIn, Instagram, Vk</div>
       </section>
     </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="assets/js/app.js"></script>
   </body>
