@@ -16,15 +16,18 @@
   <body>
     <header class="b-header fixed" id="header">
       <div class="container">
-        <nav class="b-nav">
+        <nav class="b-nav" id="nav">
           <ul class="b-ul">
-            <li class="ul__item" > <a href="#main">Главная</a> </li>
-            <li class="ul__item"> <a href="#about">О нас</a> </li>
-            <li class="ul__item" > <a href="#skills">Навыки</a> </li>
-            <li class="ul__item" > <a href="#portfolio">Портфолио</a> </li>
-            <li class="ul__item" > <a href="#contact">Контакты</a> </li>
+            <li class="ul__item" > <a class="nav__link" href="#main"     data-scroll="#main" > Главная</a> </li>
+            <li class="ul__item"> <a class="nav__link" href="#about"     data-scroll="#about" > О нас</a> </li>
+            <li class="ul__item" > <a class="nav__link" href="#skills"   data-scroll="#skills" >Навыки</a> </li>
+            <li class="ul__item" > <a class="nav__link" href="#portfolio"data-scroll="#portfolio" >Портфолио</a> </li>
+            <li class="ul__item" > <a class="nav__link" href="#contact"  data-scroll="#contact" >Контакты</a> </li>
           </ul>
         </nav>
+        <button class="nav-toggle" type="button" id="nav-toggle">
+          <span class="nav-toggle__item">Menu</span>
+        </button>
         <hr />
       </div>
     </header>

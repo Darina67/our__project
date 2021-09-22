@@ -56,17 +56,22 @@ a {
 .b-header {
   background-color: #fff;
   box-shadow: none;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
 .b-header.fixed {
-  padding: 10px 0;
+  padding: 30px 0;
   background-color: #e5e5e5;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 2;
+  z-index: 100;
   transform: translate3d(0, 0, 0);
 }
 
@@ -81,13 +86,114 @@ a {
 }
 
 .b-ul a {
+  margin-left: 10px;
   color: #828282;
   font-size: 24px;
   text-decoration: none;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  transition: color 0.1s linear;
+}
+
+.b-ul a:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  opacity: 0;
+  background-color: #fce38a;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  position: absolute;
+  transition: opacity 0.1s linear;
 }
 
 .b-ul a:hover {
   color: #333;
+}
+
+.b-ul a:hover:hover::after {
+  opacity: 1;
+}
+
+.nav__link:hover:after,
+.nav__link.active::after {
+  opacity: 1;
+  width: 100%;
+}
+
+.nav__link.active {
+  width: 100%;
+}
+
+/* nav toggle */
+.nav-toggle {
+  display: none;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  padding: 10px 0;
+  width: 30px;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 1;
+  font-size: 0;
+  color: transparent;
+}
+
+.nav-toggle:focus {
+  outline: 0;
+}
+
+.nav-toggle__item {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: background 0.2s linear;
+}
+
+.nav-toggle.active .nav-toggle__item {
+  background: none;
+}
+
+.nav-toggle__item:before,
+.nav-toggle__item:after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  transition: transform 0.2s linear;
+}
+
+.nav-toggle__item:before {
+  top: -8px;
+}
+
+.nav-toggle__item:after {
+  bottom: -8px;
+}
+
+.nav-toggle.active .nav-toggle__item::before {
+  transform: rotate(45deg) translateY(-2px);
+  transform-origin: left top;
+}
+
+.nav-toggle.active .nav-toggle__item::after {
+  transform: rotate(-45deg) translateY(3px);
+  transform-origin: left bottom;
 }
 
 .b-title {
@@ -161,7 +267,7 @@ a {
 .section.skills {
   display: flex;
   align-items: center;
-  height: 603px;
+  padding: 113px 0;
 }
 
 .section.skills .b-skills {
@@ -183,7 +289,7 @@ a {
 .section.skills .b-skills .skill__img {
   width: 90px;
   height: 90px;
-  padding-left: 40px;
+  margin-left: 38px;
 }
 
 .section.skills .b-skills .skill__title {
@@ -253,7 +359,7 @@ a {
 .section.reviews .review__item .review__text {
   font-size: 24px;
   text-align: center;
-  padding: 30px 20px;
+  padding: 30px 10px;
 }
 
 .section.reviews .review__item .review__author {
@@ -335,16 +441,76 @@ a {
 }
 
 @media (max-width: 770px) {
+  .b-header {
+    position: absolute;
+  }
   .section.skills {
-    margin: 100px 0;
+    padding: 117px 0;
   }
-  .section.skills .b-skills {
-    justify-content: center;
+  .b-skills {
+    justify-content: center !important;
   }
-  .section.skills .b-skills .skills__item {
+  .skills__item {
     width: 257px;
     display: grid;
     justify-content: center;
     margin: 25px 15px;
+  }
+  nav.b-nav.active {
+    display: block;
+  }
+  .b-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #e5e5e5;
+    width: 100%;
+  }
+  .b-nav .b-ul {
+    display: block;
+    height: auto;
+  }
+  .b-nav .b-ul .ul__item {
+    padding-top: 30px;
+    font-weight: 700;
+  }
+  .b-nav .b-ul .ul__item:first-child {
+    padding-top: 23px;
+  }
+  .b-nav .b-ul .ul__item:last-child {
+    padding-bottom: 30px;
+  }
+  .nav-toggle {
+    display: block;
+  }
+  .b-title {
+    display: block;
+  }
+  .title__info {
+    position: absolute;
+    top: 55px;
+    right: 0;
+  }
+  .title__logo {
+    position: absolute;
+    top: 9px;
+    left: 370px;
+  }
+  hr {
+    display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .b-title {
+    display: block;
+  }
+  .title__info {
+    display: block;
+    position: none;
+  }
+  .title__logo {
+    display: none;
   }
 }

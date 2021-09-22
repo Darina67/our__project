@@ -40,3 +40,19 @@ $(function(){
     },
   });
 });
+  /* menu toggle */
+  $("#nav-toggle").on("click", function(event){
+    event.preventDefault();
+
+    $(this).toggleClass("active");
+    $("#nav").toggleClass("active");
+});
+          // активные элементы в скролле
+          $("[data-scroll]").on("click", function(event){
+            var $this = $(this);
+            
+    
+            $("#nav a").removeClass("active");
+            $this.addClass("active");
+            
+        });
